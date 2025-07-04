@@ -3,7 +3,7 @@ This repository contains the implementation of the ORLock Cipher for the Cryptog
 
 ## Course Information
 - Course Title: Cryptography and Network Security
-- Course Code: CS-361
+- Course Code: CSE361
 - Level: 3, Semester: II
 - Institution: Hajee Mohammad Danesh Science & Technology University,Dinajpur
 
