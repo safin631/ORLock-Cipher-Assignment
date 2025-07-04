@@ -19,4 +19,4 @@ This repository contains the implementation of the ORLock Cipher for the Cryptog
 
 ## Files
 - <a href="report.md">report.md</a>: Detailed report with algorithm design, pseudocode, and test case.
-- `orlock_cipher.py`: Python implementation of the ORLock Cipher.
+- <a href="orlock_cipher.py">orlock_cipher.py</a>: Python implementation of the ORLock Cipher.
