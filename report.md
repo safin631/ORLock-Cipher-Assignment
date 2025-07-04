@@ -1,32 +1,14 @@
-ORLock Cipher: A Simple Cryptographic Algorithm
-Course Information
-
-Course Title: Cryptography and Network Security
-Course Code: CS-XXX
-Semester: Spring 2025
-Institution: [Your Institution Name]
-
-Student Information
-
-Submitted By: [Your Full Name]
-Student ID: [Your Student ID]
-Email: [Your Email Address]
-
-Instructor Information
-
-Submitted To: [Instructor's Full Name]
-Designation: [Instructor's Title, e.g., Professor]
-Department: [Department Name]
-
 1. Introduction
 This report presents the ORLock Cipher, a novel symmetric cryptographic algorithm designed using bitwise OR operations and number theory properties. The algorithm is simple, efficient, and leverages modular arithmetic and prime numbers to ensure secure encryption and decryption. The report includes the algorithm's design, pseudocode, flowchart description, a test case with experimental results, and the Python source code implementation.
-2. Algorithm Name
+
+3. Algorithm Name
 ORLock Cipher
 The name "ORLock" reflects the algorithm's reliance on the bitwise OR operation to "lock" the plaintext into ciphertext, with a reversible "unlock" mechanism for decryption.
-3. Algorithm Design
-The ORLock Cipher is a symmetric key algorithm that uses a numeric key to generate a key sequence based on prime numbers and modular arithmetic. The encryption process combines the plaintext with the key sequence using bitwise OR, while decryption reverses this process using modular arithmetic properties.
-3.1 Key Generation
 
+5. Algorithm Design
+The ORLock Cipher is a symmetric key algorithm that uses a numeric key to generate a key sequence based on prime numbers and modular arithmetic. The encryption process combines the plaintext with the key sequence using bitwise OR, while decryption reverses this process using modular arithmetic properties.
+
+3.1 Key Generation
 Input: A numeric key ( K ) (positive integer).
 Process:
 Compute a sequence of prime numbers starting from the smallest prime greater than or equal to ( K \mod 100 ).
