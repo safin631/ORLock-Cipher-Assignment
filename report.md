@@ -1,4 +1,4 @@
-1. Introduction
+#1. Introduction
 This report presents the ORLock Cipher, a novel symmetric cryptographic algorithm designed using bitwise OR operations and number theory properties. The algorithm is simple, efficient, and leverages modular arithmetic and prime numbers to ensure secure encryption and decryption. The report includes the algorithm's design, pseudocode, flowchart description, a test case with experimental results, and the Python source code implementation.
 
 3. Algorithm Name
