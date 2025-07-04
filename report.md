@@ -207,8 +207,3 @@ The Python implementation is provided in orlock_cipher.py in the repository. See
 
 ## 8. Conclusion
 The ORLock Cipher is a simple yet effective cryptographic algorithm that combines bitwise OR operations with number theory concepts like modular arithmetic and prime numbers. The test case demonstrates its correctness, and the Python implementation ensures practical usability. Future improvements could include enhancing key generation with more complex number-theoretic functions or adding multiple rounds of encryption for increased security.
-## 9. Repository Structure
-
-report.md: This report.<br/>
-orlock_cipher.py: Python implementation of the ORLock Cipher.<br/>
-README.md: Repository overview and instructions.
