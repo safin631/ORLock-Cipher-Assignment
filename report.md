@@ -1,14 +1,14 @@
-#1. Introduction
+## 1. Introduction
 This report presents the ORLock Cipher, a novel symmetric cryptographic algorithm designed using bitwise OR operations and number theory properties. The algorithm is simple, efficient, and leverages modular arithmetic and prime numbers to ensure secure encryption and decryption. The report includes the algorithm's design, pseudocode, flowchart description, a test case with experimental results, and the Python source code implementation.
 
-3. Algorithm Name
+## 2. Algorithm Name
 ORLock Cipher
 The name "ORLock" reflects the algorithm's reliance on the bitwise OR operation to "lock" the plaintext into ciphertext, with a reversible "unlock" mechanism for decryption.
 
-5. Algorithm Design
+## 3. Algorithm Design
 The ORLock Cipher is a symmetric key algorithm that uses a numeric key to generate a key sequence based on prime numbers and modular arithmetic. The encryption process combines the plaintext with the key sequence using bitwise OR, while decryption reverses this process using modular arithmetic properties.
 
-3.1 Key Generation
+### 3.1 Key Generation
 Input: A numeric key ( K ) (positive integer).
 Process:
 Compute a sequence of prime numbers starting from the smallest prime greater than or equal to ( K \mod 100 ).
@@ -17,7 +17,7 @@ For each character in the plaintext, generate a key value ( K_i = P_i \mod M ), 
 
 Output: A key sequence ( { K_1, K_2, \ldots, K_n } ), where ( n ) is the length of the plaintext.
 
-3.2 Encryption Algorithm
+### 3.2 Encryption Algorithm
 
 Input: Plaintext ( P = { P_1, P_2, \ldots, P_n } ) (as ASCII values), Key ( K ).
 Process:
@@ -32,7 +32,7 @@ Convert ( C_i ) values back to characters.
 
 Output: Ciphertext ( C = { C_1, C_2, \ldots, C_n } ).
 
-3.3 Decryption Algorithm
+### 3.3 Decryption Algorithm
 
 Input: Ciphertext ( C = { C_1, C_2, \ldots, C_n } ), Key ( K ).
 Process:
@@ -49,13 +49,13 @@ Convert ( P_i ) values back to characters.
 
 Output: Plaintext ( P = { P_1, P_2, \ldots, P_n } ).
 
-3.4 Number Theory Properties
+### 3.4 Number Theory Properties
 
 Modular Arithmetic: Ensures output stays within the ASCII range (0–127).
 Prime Numbers: Used in key generation to create a pseudo-random, deterministic sequence.
 Bitwise OR: Introduces non-linearity, making the algorithm resistant to simple pattern analysis.
 
-4. Pseudocode
+## 4. Pseudocode
 Key Generation
 FUNCTION GenerateKeySequence(K, length):
     prime_list = []
@@ -70,7 +70,7 @@ FUNCTION GenerateKeySequence(K, length):
         APPEND (p % K) % 127 to key_sequence
     RETURN key_sequence
 
-Encryption
+### Encryption
 FUNCTION Encrypt(plaintext, Key):
     key_seq = GenerateKeySequence(Key, length of plaintext)
     ciphertext = ""
@@ -83,7 +83,7 @@ FUNCTION Encrypt(plaintext, Key):
         APPEND character(c) to ciphertext
     RETURN ciphertext
 
-Decryption
+### Decryption
 FUNCTION Decrypt(ciphertext, Key):
     key_seq = GenerateKeySequence(Key, length of ciphertext)
     plaintext = ""
@@ -102,9 +102,9 @@ FUNCTION Decrypt(ciphertext, Key):
         APPEND character(p) to plaintext
     RETURN plaintext
 
-5. Flowchart Description
+## 5. Flowchart Description
 Due to the textual nature of this report, flowcharts are described below. These can be drawn using tools like Lucidchart or Draw.io.
-5.1 Key Generation Flowchart
+### 5.1 Key Generation Flowchart
 
 Start: Input key ( K ), plaintext length ( n ).
 Process:
@@ -116,7 +116,7 @@ Generate key sequence by computing ( (P_i \mod K) \mod 127 ).
 
 End: Output key sequence.
 
-5.2 Encryption Flowchart
+### 5.2 Encryption Flowchart
 
 Start: Input plaintext, key.
 Process:
@@ -133,7 +133,7 @@ Convert to character.
 
 End: Output ciphertext.
 
-5.3 Decryption Flowchart
+### 5.3 Decryption Flowchart
 
 Start: Input ciphertext, key.
 Process:
@@ -150,19 +150,19 @@ Convert to character.
 
 End: Output plaintext.
 
-6. Test Case and Experimental Results
-Test Case
+## 6. Test Case and Experimental Results
+### Test Case
 
 Plaintext: "Hello"
 Key: 12345
 Steps:
-Key Sequence Generation:
+#### Key Sequence Generation:
 ( K = 12345 ), ( start = 12345 \mod 100 = 45 ).
 Primes starting from 47: [47, 53, 59, 61, 67] (for 5 characters).
 Key sequence: ( [(47 \mod 12345) \mod 127, (53 \mod 12345) \mod 127, \ldots] = [47, 53, 59, 61, 67] ).
 
 
-Encryption:
+#### Encryption:
 Plaintext ASCII: [72, 101, 108, 108, 111] (for "Hello").
 For each character:
 ( C_1 = (72 \lor 47) \mod 127 = 127 \mod 127 = 0 \rightarrow 0 + 32 = 32 ) (space).
@@ -176,7 +176,7 @@ Ciphertext ASCII: [32, 117, 32, 125, 32].
 Ciphertext: " u } " (where 32 is space, 117 is 'u', 125 is '}').
 
 
-Decryption:
+#### Decryption:
 Ciphertext ASCII: [32, 117, 32, 125, 32].
 Key sequence: [47, 53, 59, 61, 67].
 For each character:
@@ -194,7 +194,7 @@ Plaintext: "Hello".
 
 
 
-Experimental Results
+#### Experimental Results
 
 Input Plaintext: "Hello"
 Key: 12345
@@ -202,12 +202,13 @@ Ciphertext: " u } "
 Decrypted Plaintext: "Hello"
 Conclusion: The algorithm successfully encrypts and decrypts the plaintext, retrieving the original message.
 
-7. Source Code
+## 7. Source Code
 The Python implementation is provided in orlock_cipher.py in the repository. See below for the code listing.
-8. Conclusion
-The ORLock Cipher is a simple yet effective cryptographic algorithm that combines bitwise OR operations with number theory concepts like modular arithmetic and prime numbers. The test case demonstrates its correctness, and the Python implementation ensures practical usability. Future improvements could include enhancing key generation with more complex number-theoretic functions or adding multiple rounds of encryption for increased security.
-9. Repository Structure
 
-report.md: This report.
-orlock_cipher.py: Python implementation of the ORLock Cipher.
+## 8. Conclusion
+The ORLock Cipher is a simple yet effective cryptographic algorithm that combines bitwise OR operations with number theory concepts like modular arithmetic and prime numbers. The test case demonstrates its correctness, and the Python implementation ensures practical usability. Future improvements could include enhancing key generation with more complex number-theoretic functions or adding multiple rounds of encryption for increased security.
+## 9. Repository Structure
+
+report.md: This report.<br/>
+orlock_cipher.py: Python implementation of the ORLock Cipher.<br/>
 README.md: Repository overview and instructions.
