@@ -18,5 +18,5 @@ This repository contains the implementation of the ORLock Cipher for the Cryptog
 - Department: Computer Science and Engineering (CSE)
 
 ## Files
-- `report.md`: Detailed report with algorithm design, pseudocode, and test case.
+- report.md: Detailed report with algorithm design, pseudocode, and test case.
 - `orlock_cipher.py`: Python implementation of the ORLock Cipher.
