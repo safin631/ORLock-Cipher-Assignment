@@ -203,7 +203,7 @@ Decrypted Plaintext: "Hello"
 Conclusion: The algorithm successfully encrypts and decrypts the plaintext, retrieving the original message.
 
 ## 7. Source Code
-The Python implementation is provided in orlock_cipher.py in the repository. See below for the code listing.
+The Python implementation is provided in <a href="orlock_cipher.py">orlock_cipher.py</a> in the repository. See below for the code listing.
 
 ## 8. Conclusion
 The ORLock Cipher is a simple yet effective cryptographic algorithm that combines bitwise OR operations with number theory concepts like modular arithmetic and prime numbers. The test case demonstrates its correctness, and the Python implementation ensures practical usability. Future improvements could include enhancing key generation with more complex number-theoretic functions or adding multiple rounds of encryption for increased security.
